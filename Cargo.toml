@@ -1,0 +1,26 @@
+[package]
+name = "hef_manager"
+version = "0.1.0"
+edition = "2024"
+build = "./build.rs"
+
+[dependencies]
+prost = "0.13.4"
+prost-types = "0.13.4"
+tonic = { version = "0.12.3", features = ["transport"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.137"
+clap = "4.5.26"
+crc32fast = "1.4.2"
+xxhash-rust = { version = "0.8.15", features = ["xxh3"] }
+
+[build-dependencies]
+tonic-build = "0.12.3"
+
+[[bin]]
+name = "hef_cli"
+path = "src/main.rs"
+
+[[bin]]
+name = "test_proto"
+path = "src/test_proto.rs"
