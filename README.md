@@ -1,0 +1,1 @@
+The objective is to make a Hailo Hef reader that can read a hef file and together with hailors configure a model to be read. Unfortunately the hef header or proto is not read correctly and as such the hef is not read correctly. Any help greatly appreciated.
